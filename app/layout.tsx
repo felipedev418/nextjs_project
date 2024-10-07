@@ -13,12 +13,12 @@ import localFont from "next/font/local";
 
 const Stopbuck = localFont({
   src: "./fonts/stopbuck/Stopbuck.otf",
-  variable: '--font-stopbuck',
+  variable: "--font-stopbuck",
 });
 
 const fredoka = Fredoka({
-      subsets: ["latin"],
-      variable: "--font-fredoka"
+  subsets: ["latin"],
+  variable: "--font-fredoka",
 });
 
 export const metadata: Metadata = {
@@ -31,39 +31,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  
   return (
     <html lang="en">
       <body
         className={cn(
-          fredoka.className, fredoka.variable, Stopbuck.variable,
+          fredoka.className,
+          fredoka.variable,
+          Stopbuck.variable,
           "noscrollbar relative overflow-x-hidden"
         )}
       >
-          <Providers>
-            <div className="flex min-h-screen flex-1">
-              <div
-                className={` min-h-screen h-[100vh] flex flex-col w-full  border-r border-b rounded-br border-[#21201F] gap-3 relative`}
-              >
-                <Image
-                  src={Background}
-                  className="absolute h-full w-full z-0 inset-0"
-                  alt="image"
-                />
-                {/* <TopParticles className="absolute w-auto h-auto -top-[22rem] -right-[20rem]" /> */}
-                <Navbar />
-                <div className=" h-[99vh] z-40 pt-24 overflow-auto noScrollbar overflow-x-hidden">
-                  <div className="lg:pl-[90px] px-4 pb-12">
-                  {children}
-
-                  </div>
-                  <Footer />
-                </div>
+        <Providers>
+          <div className="flex min-h-screen flex-1">
+            <div
+              className={` min-h-screen h-[100vh] flex flex-col w-full  border-r border-b rounded-br border-[#21201F] gap-3 relative`}
+            >
+              <Image
+                src={Background}
+                className="absolute h-full w-full z-0 inset-0"
+                alt="image"
+              />
+              {/* <TopParticles className="absolute w-auto h-auto -top-[22rem] -right-[20rem]" /> */}
+              <Navbar />
+              <div className=" h-[99vh] z-40 pt-24 overflow-auto noScrollbar overflow-x-hidden">
+                <div className="lg:pl-[90px] px-4 pb-12">{children}</div>
+                <Footer />
               </div>
-              <Sidebar />
             </div>
-          </Providers>
+            <Sidebar />
+          </div>
+        </Providers>
       </body>
     </html>
   );

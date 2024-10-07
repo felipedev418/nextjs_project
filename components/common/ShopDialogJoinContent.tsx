@@ -15,6 +15,8 @@ import { Dialog, DialogTitle, DialogTrigger } from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import InventoryDialog from "./InventoryDialog";
 import AcceptTradeDialog from "./AcceptTradeDilaog";
+import StartGameDialog from "./StartGameDialog";
+import PurchaseScrapDialog from "./PurchaseScrapDialog";
 
 const item = {
     times: 5,
@@ -128,7 +130,9 @@ const ShopDialogJoinContent = () => {
                             Join Coinfilp
                         </Button>
                     </DialogTrigger>
+                    {/* <StartGameDialog /> */}
                     <AcceptTradeDialog />
+                    {/* <PurchaseScrapDialog /> */}
                 </Dialog>
             </div>
             {/* <div className=" p-[14px] flex flex-col pt-4 rounded-xl bg-[#21201F] border border-[#292828] w-full sm:w-[330px] gap-[19px] h-fit">

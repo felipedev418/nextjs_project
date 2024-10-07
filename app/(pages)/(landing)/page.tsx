@@ -4,7 +4,7 @@ import Welcome from "./_partials/Welcome";
 
 const Home = () => {
   return (
-    <div className=" py-[26px] md:py-16 ">
+    <div className="py-[26px] md:py-16 ">
       <Welcome />
       <CoinFlip />
     </div>

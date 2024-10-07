@@ -6,6 +6,8 @@ import { Dialog, DialogTitle, DialogTrigger } from "@radix-ui/react-dialog";
 import MjhonirImage from "@/public/assets/images/mjolnir.png";
 import Image from "next/image";
 import StartCoinModal from "./StartCoinModal";
+import RandomCoinModal from "./RandomCoinModal";
+import PurchaseScrapDialog from "./PurchaseScrapDialog";
 
 const AcceptTradeDialog = () => {
     return (
@@ -42,7 +44,9 @@ const AcceptTradeDialog = () => {
                                 Aceept Trade!
                             </Button>
                         </DialogTrigger>
-                        <StartCoinModal />
+                        <PurchaseScrapDialog />
+                        {/* <RandomCoinModal /> */}
+                        {/* <StartCoinModal /> */}
                     </Dialog>
                 </div>
             </div>

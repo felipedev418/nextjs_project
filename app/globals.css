@@ -256,6 +256,28 @@ body {
     rgba(255, 0, 0, 0)
   );
 }
+.reedgradient {
+  border-image-slice: 1;
+  /* border-top: none; */
+  border-image-source: linear-gradient(
+  to right,
+    #211f1f,
+    #ff2b2b80,
+    #ff2b2bb4,
+    #ff2b2b,
+    #211f1f,
+    #21201f,
+    #21201f,
+    #21201f,
+    #21201f
+  );
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 0)
+  );
+}
+
 .bg-redliear {
   background-image: linear-gradient(to left, #db1a2793, #db1a2700);
 }

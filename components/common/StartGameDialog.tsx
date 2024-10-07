@@ -7,6 +7,7 @@ import { Dialog, DialogTitle } from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import StartCoinModal from "./StartCoinModal";
 import RandomCoinModal from "./RandomCoinModal";
+import AcceptTradeDialog from "./AcceptTradeDilaog";
 
 const item = {
     times: 5,
@@ -16,7 +17,7 @@ const item = {
 const StartGameDialog = () => {
     const itemsArray = Array.from({ length: 40 });
     const [isSelect, setIsSelect] = useState({
-        white: "",
+        white: "white",
         red: "",
         isModal: false,
     });
@@ -89,7 +90,8 @@ const StartGameDialog = () => {
                     </DialogTrigger>
                     {(isSelect.red !== "" || isSelect.white !== "") &&
                     !isSelect.isModal ? (
-                        <RandomCoinModal />
+                        // <RandomCoinModal />
+                        <AcceptTradeDialog />
                     ) : (
                         ""
                     )}
